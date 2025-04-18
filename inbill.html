@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý Bán Hàng Tạp Hóa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Quản lý Bán Hàng Tạp Hóa</h1>
+
+  <div class="input-section">
+    <label>Tải file Excel sản phẩm: </label>
+    <input type="file" id="excelFile" accept=".xlsx">
+  </div>
+
+  <div class="input-section">
+  <input type="text" id="barcodeInput" placeholder="Quét hoặc nhập mã vạch...">
+</div>
+
+
+  <table id="productTable">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Tên hàng hóa</th>
+        <th>Số lượng</th>
+        <th>Đơn giá (VNĐ)</th>
+        <th>Thành tiền (VNĐ)</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="total">
+    <strong>Tổng cộng: <span id="totalAmount">0</span> VNĐ</strong>
+  </div>
+
+  <button onclick="printBill()">In hóa đơn</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
